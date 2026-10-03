@@ -1,0 +1,268 @@
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 48px;
+  padding: 24px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.avatarWrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.avatarRing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #fbe9ba;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.online {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #38cd3e;
+}
+
+.content {
+  min-width: 0;
+  padding-right: 42px;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.identity {
+  min-width: 140px;
+}
+
+.label {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #8a8a89;
+}
+
+.name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.stats li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.stats li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  margin-left: 16px;
+  background: rgba(18, 20, 23, 0.2);
+}
+
+.price {
+  color: #38cd3e;
+  font-weight: 500;
+}
+
+.heart {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #121417;
+  cursor: pointer;
+}
+
+.heartActive {
+  color: #f4c550;
+}
+
+.heart svg {
+  width: 26px;
+  height: 26px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+}
+
+.meta p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.meta span {
+  color: #8a8a89;
+}
+
+.speaks {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.readMore {
+  margin-top: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: #121417;
+  cursor: pointer;
+}
+
+.experience {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.reviewAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f8f8f8;
+  font-weight: 500;
+  color: #8a8a89;
+}
+
+.reviewName {
+  margin: 0 0 2px;
+  font-weight: 500;
+  color: #8a8a89;
+}
+
+.reviewRating {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.comment {
+  margin: 0;
+  color: #8a8a89;
+}
+
+.levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.level {
+  padding: 8px 12px;
+  border: 1px solid rgba(18, 20, 23, 0.2);
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  color: #121417;
+}
+
+.levelActive {
+  border-color: transparent;
+  background: #f4c550;
+}
+
+.bookBtn {
+  margin-top: 32px;
+  min-width: 232px;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 12px;
+  background: #f4c550;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5556;
+  color: #121417;
+  cursor: pointer;
+}
+
+.bookBtn:hover,
+.bookBtn:focus-visible {
+  background: #ffdc86;
+}

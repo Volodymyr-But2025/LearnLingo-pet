@@ -1,0 +1,46 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.loadMore {
+  display: block;
+  margin: 64px auto 0;
+  min-width: 183px;
+  height: 60px;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 12px;
+  background: #f4c550;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5556;
+  color: #121417;
+  cursor: pointer;
+}
+
+.loadMore:hover,
+.loadMore:focus-visible {
+  background: #ffdc86;
+}
+
+.loadMore:disabled {
+  cursor: not-allowed;
+}
+
+.empty {
+  margin: 40px 0;
+  font-size: 18px;
+  color: #8a8a89;
+}
+
+.notice {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}

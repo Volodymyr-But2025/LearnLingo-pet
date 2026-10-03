@@ -1,0 +1,111 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 24px;
+  background: inherit;
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding: 20px 128px;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  color: #121417;
+  text-decoration: none;
+}
+
+.logoMark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #0057b7 0%, #0057b7 50%, #ffd700 50%, #ffd700 100%);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.link {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #121417;
+  text-decoration: none;
+}
+
+.linkActive {
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.loginBtn,
+.logoutBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  color: #121417;
+  cursor: pointer;
+}
+
+.loginBtn svg,
+.logoutBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.registerBtn {
+  min-width: 166px;
+  padding: 14px 39px;
+  border: none;
+  border-radius: 12px;
+  background: #121417;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+.registerBtn:hover,
+.registerBtn:focus-visible,
+.loginBtn:hover,
+.loginBtn:focus-visible,
+.logoutBtn:hover,
+.logoutBtn:focus-visible {
+  color: #f4c550;
+}
+
+.registerBtn:hover,
+.registerBtn:focus-visible {
+  background: #121417;
+  color: #f4c550;
+}
+
+.user {
+  font-weight: 500;
+  color: #121417;
+}
