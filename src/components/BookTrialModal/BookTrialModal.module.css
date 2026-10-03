@@ -121,3 +121,27 @@
 .submit:focus-visible {
   background: #ffdc86;
 }
+
+@media (max-width: 767px) {
+  .title {
+    margin-bottom: 16px;
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+
+  .description {
+    margin-bottom: 16px;
+  }
+
+  .teacher {
+    margin-bottom: 28px;
+  }
+
+  .reasonsTitle {
+    font-size: 20px;
+  }
+
+  .submit {
+    margin-top: 16px;
+  }
+}

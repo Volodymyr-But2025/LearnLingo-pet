@@ -266,3 +266,81 @@
 .bookBtn:focus-visible {
   background: #ffdc86;
 }
+
+@media (max-width: 1023px) {
+  .card {
+    gap: 24px;
+  }
+
+  .top {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .identity {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .avatarWrap,
+  .avatarRing {
+    width: 96px;
+    height: 96px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .online {
+    top: 12px;
+    right: 12px;
+  }
+
+  .content {
+    padding-right: 0;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-right: 36px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .stats {
+    gap: 10px 12px;
+    font-size: 14px;
+  }
+
+  .stats li {
+    white-space: normal;
+  }
+
+  .stats li:not(:last-child)::after {
+    margin-left: 12px;
+  }
+
+  .heart {
+    top: 20px;
+    right: 20px;
+  }
+
+  .bookBtn {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 24px;
+  }
+}

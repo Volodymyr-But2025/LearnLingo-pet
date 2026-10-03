@@ -121,7 +121,6 @@ export function TeachersPage() {
     ? matchedTeachers.length > displayLimit
     : teachers.length > displayLimit || hasMore
 
-  // Silently fill the current filtered page and probe one extra match.
   useEffect(() => {
     if (loading || loadingMore || !filteredMode) return
 

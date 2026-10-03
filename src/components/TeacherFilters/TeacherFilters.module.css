@@ -39,3 +39,19 @@
   outline: 2px solid #f4c550;
   outline-offset: 1px;
 }
+
+@media (max-width: 767px) {
+  .filters {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  .select {
+    width: 100%;
+    min-width: 0;
+  }
+}

@@ -19,3 +19,14 @@
     width: min(100% - 256px, 1184px);
   }
 }
+
+@media (max-width: 767px) {
+  .app {
+    padding-bottom: 64px;
+  }
+
+  .container {
+    width: min(100% - 32px, 1184px);
+    padding-top: 24px;
+  }
+}

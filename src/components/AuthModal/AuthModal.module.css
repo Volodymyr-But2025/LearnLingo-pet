@@ -68,3 +68,19 @@
   opacity: 0.7;
   cursor: not-allowed;
 }
+
+@media (max-width: 767px) {
+  .title {
+    margin-bottom: 16px;
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+
+  .text {
+    margin-bottom: 28px;
+  }
+
+  .submit {
+    margin-top: 16px;
+  }
+}

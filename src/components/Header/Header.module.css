@@ -3,9 +3,10 @@
   top: 0;
   z-index: 100;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px 24px;
   padding: 20px 24px;
   background: inherit;
 }
@@ -33,6 +34,58 @@
   height: 28px;
   border-radius: 50%;
   background: linear-gradient(180deg, #0057b7 0%, #0057b7 50%, #ffd700 50%, #ffd700 100%);
+}
+
+.menuBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #121417;
+  cursor: pointer;
+}
+
+.menuBtn:hover,
+.menuBtn:focus-visible {
+  color: #f4c550;
+}
+
+.menuIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+}
+
+.menuIcon span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.headerOpen .menuIcon span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.headerOpen .menuIcon span:nth-child(2) {
+  opacity: 0;
+}
+
+.headerOpen .menuIcon span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.panel {
+  display: contents;
 }
 
 .nav {
@@ -108,4 +161,72 @@
 .user {
   font-weight: 500;
   color: #121417;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  .header {
+    gap: 12px 16px;
+    padding: 16px 20px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .registerBtn {
+    min-width: 0;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menuBtn {
+    display: inline-flex;
+  }
+
+  .panel {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 8px 0 12px;
+    border-top: 1px solid rgba(18, 20, 23, 0.08);
+  }
+
+  .panelOpen {
+    display: flex;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .loginBtn,
+  .logoutBtn {
+    justify-content: flex-start;
+    min-height: 44px;
+  }
+
+  .registerBtn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .user {
+    max-width: none;
+    white-space: normal;
+  }
 }

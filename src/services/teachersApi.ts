@@ -26,7 +26,6 @@ function toTeacher(id: string, teacher: TeacherData): Teacher {
 function mapTeachers(data: TeachersResponse): Teacher[] {
   if (!data) return []
 
-  // Sequential numeric keys come back as a sparse JSON array with null holes.
   if (Array.isArray(data)) {
     return data.flatMap((teacher, index) =>
       teacher ? [toTeacher(String(index), teacher)] : [],

@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   line-height: 1.5;
   color: #121417;
   background: #fff;
+  overflow-x: clip;
 }
 
 h1,
