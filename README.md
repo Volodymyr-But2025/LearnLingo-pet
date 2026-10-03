@@ -90,17 +90,18 @@ npm run build
 npm run preview
 ```
 
-## Deploy notes
+## Deploy (GitHub Pages)
 
-Deploy the `dist` folder to GitHub Pages, Netlify, or another static host.
+The site is built by GitHub Actions (`.github/workflows/deploy.yml`) and published from the `dist` folder.
 
-For `BrowserRouter` on a static host, configure fallback to `index.html` for client routes (`/teachers`, `/favorites`).
+1. In the repo: **Settings → Secrets and variables → Actions** add:
+   - `VITE_FIREBASE_API_KEY`
+   - `VITE_FIREBASE_DATABASE_URL`
+2. **Settings → Pages → Build and deployment → Source**: **GitHub Actions**
+3. Push to `main` (or run the workflow manually). Site:
+   https://volodymyr-but2025.github.io/LearnLingo-pet/
 
-On Netlify create `public/_redirects`:
-
-```text
-/*    /index.html   200
-```
+`vite.config.ts` uses `base: '/LearnLingo-pet/'` for this project URL.
 
 ## Project structure
 
