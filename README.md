@@ -92,16 +92,21 @@ npm run preview
 
 ## Deploy (GitHub Pages)
 
-The site is built by GitHub Actions (`.github/workflows/deploy.yml`) and published from the `dist` folder.
+Publish the production build to the `gh-pages` branch:
 
-1. In the repo: **Settings → Secrets and variables → Actions** add:
-   - `VITE_FIREBASE_API_KEY`
-   - `VITE_FIREBASE_DATABASE_URL`
-2. **Settings → Pages → Build and deployment → Source**: **GitHub Actions**
-3. Push to `main` (or run the workflow manually). Site:
-   https://volodymyr-but2025.github.io/LearnLingo-pet/
+```bash
+npm run deploy
+```
 
-`vite.config.ts` uses `base: '/LearnLingo-pet/'` for this project URL.
+Then in GitHub: **Settings → Pages → Build and deployment**
+
+- Source: **Deploy from a branch**
+- Branch: **gh-pages** / **/ (root)**
+
+Site: https://volodymyr-but2025.github.io/LearnLingo-pet/
+
+`vite.config.ts` uses `base: '/LearnLingo-pet/'` for this project URL.  
+Firebase keys are taken from your local `.env` at build time (do not commit `.env`).
 
 ## Project structure
 
